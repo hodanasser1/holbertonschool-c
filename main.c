@@ -1,13 +1,12 @@
 #!/bin/bash
-# 942 "/usr/include/stdio.h" 3 4
-
-# 2 "main.c" 2
-
-
-# 3 "main.c"
-int main(void)
+#include <stdio.h>
+#include <string.h>
+int main()
 {
- return (0);
+   char nickname[20];
+   printf("Enter your Nick name:");
+   scanf("%s", nickname);
+   printf("%s",nickname);
+   return (0);
 }
-
 
