@@ -5,9 +5,12 @@
 
 
 # 3 "main.c"
-int main(void)
+int main()
 {
- printf("hello");
- return (0);
+   char nickname[20];
+   printf("Enter your Nick name:");
+   scanf("%s", nickname);
+   printf("%s",nickname);
+   return (0);
 }
 
