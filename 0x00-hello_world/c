@@ -1,4 +1,6 @@
 #!/bin/bash
+#include <stdio.h>
+#include <string.h>
 # 942 "/usr/include/stdio.h" 3 4
 
 # 2 "main.c" 2
@@ -7,6 +9,7 @@
 # 3 "main.c"
 int main(void)
 {
+ printf("hello");
  return (0);
 }
 
