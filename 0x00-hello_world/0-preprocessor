@@ -1,9 +1,2 @@
 #!/bin/bash
-main()
-{
-int i;
-printf("enter the no.\n");
-scanf("%d",&i);
-printf("shiv");
-}
 
