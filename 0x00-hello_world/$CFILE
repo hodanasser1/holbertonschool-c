@@ -1,3 +1,0 @@
-#!/bin/bash
-gcc odd.c -o 0-preprocessor && ./$CFILE
-
