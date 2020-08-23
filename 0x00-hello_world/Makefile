@@ -5,7 +5,8 @@ CC = gcc
 #  -g    adds debugging information to the executable file
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -S -g -Wall
-
+LC_ALL=C 
+LANG=C
 # the build target executable:
 TARGET = main
 
@@ -14,5 +15,4 @@ all: $(TARGET)
 $(TARGET): $(TARGET).c
 	$(CC) $(CFLAGS) -o $(TARGET).o $(TARGET).c
 
-clean:
-	$(RM) $(TARGET)
+
