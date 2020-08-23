@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int main () {
-   char ch;
-
-   for(ch = 'A' ; ch <= 'Z' ; ch++) {
-      putchar(ch);
-   }
-   
-   return(0);
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
 }
