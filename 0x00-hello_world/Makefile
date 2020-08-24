@@ -9,13 +9,11 @@ CFLAGS  = -g -Wall
 # the build target executable:
 TARGET = ${CFILE}
 OUTPUT = $(subst .c,.o,$(TARGET))
-OUTPUT_ASM = $(subst .c,.s,$(TARGET))
-all: compile asm
+
+all: compile
 
 compile:
 	$(CC) $(CFLAGS) -o $(OUTPUT) $(TARGET)
-asm:
-	$(CC) $(CFLAGS) -S -o $(OUTPUT_ASM) $(TARGET)
 clean:
-	$(RM) $(OUTPUT) $(OUTPUT_ASM)
+	$(RM) $(OUTPUT)
 
