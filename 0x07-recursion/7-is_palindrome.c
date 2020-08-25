@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * is_palindrome - check the code for Holberton School students.
+ * @s: string
+ *
+ * Return: Always 0.
+ */
 int is_palindrome(char *s)
 {
 	int len = recLen(s);
@@ -7,6 +13,14 @@ int is_palindrome(char *s)
 	return (palindrome(s, 0, len - 1));
 }
 
+/**
+ * palindrome - check the code for Holberton School students.
+ * @arr: string
+ * @start: string
+ * @end: string
+ *
+ * Return: Always 0.
+ */
 int palindrome(char *arr, int start, int end)
 {
 	if (start >= end)
@@ -23,6 +37,12 @@ int palindrome(char *arr, int start, int end)
 	}
 }
 
+/**
+ * recLen - check the code for Holberton School students.
+ * @str: string
+ *
+ * Return: Always 0.
+ */
 int recLen(char *str)
 {
 	if (*str == '\0')
