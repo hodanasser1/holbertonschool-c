@@ -36,7 +36,7 @@ int checkForPrime(int n, int i)
 	else
 	{
 		i = i - 1;
-		return checkForPrime(n, i);
+		return (checkForPrime(n, i));
 	}
 }
 
