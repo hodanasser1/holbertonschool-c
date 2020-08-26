@@ -49,6 +49,7 @@ void print_numbers(const char *separator, const unsigned int num, ...)
 {
 	va_list valist;
 	unsigned int i;
+
 	if (num == 0)
 		_putchar((char)'\n');
 
