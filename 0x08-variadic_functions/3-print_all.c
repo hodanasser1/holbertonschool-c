@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 	int valid;
 
 	/* initialize valist for num number of arguments */
-	va_start(valist, num);
+	va_start(valist, format);
 	/* access all the arguments assigned to valist */
 	while (i < num)
 	{
@@ -64,7 +64,7 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	_putchar((char)'\n');
+	printf("\n");
 	va_end(valist);
 }
 
