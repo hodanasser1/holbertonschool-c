@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 {
 	va_list valist;
 	unsigned int i = 0;
-	unsigned int num = _strlen_recursion((char *)format);
+	unsigned int num = _strlen_recursion((char *)(format == NULL ? "" : format));
 	char *a;
 	int valid;
 
