@@ -47,6 +47,8 @@ void _puts_recursion(char *s)
  */
 void print_numbers(const char *separator, const unsigned int num, ...)
 {
+	if (num == 0)
+		return;
 	va_list valist;
 	unsigned int i;
 
