@@ -41,17 +41,19 @@ void print_strings(const char *separator, const unsigned int num, ...)
 	/* access all the arguments assigned to valist */
 	for (i = 0; i < num; i++)
 	{
-		_puts_recursion(va_arg(valist, char *));
-		if ((i != num - 1))
+		char *a = va_arg(valist, char *);
+
+		if (a != NULL)
 		{
-			if (separator != NULL)
-			{
-				_puts_recursion((char *)separator);
-			}
-			else
-			{
-				_puts_recursion((char *)"(nil)");
-			}
+			_puts_recursion(va_arg(valist, char *));
+		}
+		else
+		{
+			_puts_recursion((char *)"(nil)");
+		}
+		if ((i != num - 1) && (separator != NULL))
+		{
+			_puts_recursion((char *)separator);
 		}
 		if (i == num - 1)
 		{
