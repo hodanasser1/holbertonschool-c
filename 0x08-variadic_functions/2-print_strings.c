@@ -45,7 +45,7 @@ void print_strings(const char *separator, const unsigned int num, ...)
 
 		if (a != NULL)
 		{
-			_puts_recursion(va_arg(valist, char *));
+			_puts_recursion(a);
 		}
 		else
 		{
