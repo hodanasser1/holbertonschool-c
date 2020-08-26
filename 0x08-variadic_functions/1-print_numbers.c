@@ -47,10 +47,10 @@ void _puts_recursion(char *s)
  */
 void print_numbers(const char *separator, const unsigned int num, ...)
 {
-	if (num == 0)
-		return;
 	va_list valist;
 	unsigned int i;
+	if (num == 0)
+		_putchar((char)'\n');
 
 	/* initialize valist for num number of arguments */
 	va_start(valist, num);
