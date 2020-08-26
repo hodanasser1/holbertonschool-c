@@ -1,26 +1,19 @@
 ;hello.asm
+global main
 
-    bits 64
-    global main
-    extern printf
+section .text
 
-    section .text
 main:
-    ; function setup
-    push    rbp
-    mov     rbp, rsp
-    sub     rsp, 32
-    ;
-    lea     rdi, [rel message]
-    mov     al, 0
-    call    printf
+  mov rax, 1        ; write(
+  mov rdi, 1        ;   STDOUT_FILENO,
+  mov rsi, msg      ;   "Hello, world!\n",
+  mov rdx, msglen   ;   sizeof("Hello, world!\n")
+  syscall           ; );
 
-    ; function return
-    mov     eax, 0
-    add     rsp, 32
-    pop     rbp
-    ret
+  mov rax, 60       ; exit(
+  mov rdi, 0        ;   EXIT_SUCCESS
+  syscall           ; );
 
-    section .data
-message: db      'Hello, Holberton',0x0D,0x0a
-
+section .rodata
+  msg: db "Hello, Holberton", 10
+  msglen: equ $ - msg
