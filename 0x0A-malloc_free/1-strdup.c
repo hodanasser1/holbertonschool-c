@@ -8,7 +8,7 @@
  *
  * Return: Always 0.
  */
-unsigned int _strlen_recursion(char *s)
+uint64_t _strlen_recursion(char *s)
 {
 	if (*s)
 	{
@@ -27,8 +27,8 @@ unsigned int _strlen_recursion(char *s)
 char *_strdup(char *str)
 {
 	char *arr;
-	unsigned int i = 0;
-	unsigned int len = 0;
+	uint64_t i = 0;
+	uint64_t len = 0;
 
 	if (str == NULL)
 	{
