@@ -28,12 +28,13 @@ char *_strdup(char *str)
 {
 	char *arr;
 	int i = 0;
-	int len = _strlen_recursion(str);
+	int len = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	len = _strlen_recursion(str);
 	arr = (char *)malloc(sizeof(char) * len);
 	for (i = 0; arr != NULL && i < len; i++)
 	{
