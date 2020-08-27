@@ -35,6 +35,12 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	len = _strlen_recursion(str);
+	if (len == 0)
+	{
+		arr = (char *)malloc(sizeof(char) * 1);
+		arr = "";
+		return (arr);
+	}
 	arr = (char *)malloc(sizeof(char) * len);
 	for (i = 0; arr != NULL && i < len; i++)
 	{
