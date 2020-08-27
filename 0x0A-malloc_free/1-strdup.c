@@ -8,7 +8,7 @@
  *
  * Return: Always 0.
  */
-int _strlen_recursion(char *s)
+unsigned int _strlen_recursion(char *s)
 {
 	if (*s)
 	{
@@ -27,20 +27,14 @@ int _strlen_recursion(char *s)
 char *_strdup(char *str)
 {
 	char *arr;
-	int i = 0;
-	int len = 0;
+	unsigned int i = 0;
+	unsigned int len = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 	len = _strlen_recursion(str);
-	if (len == 0)
-	{
-		arr = (char *)malloc(sizeof(char) * 1);
-		arr = "";
-		return (arr);
-	}
 	arr = (char *)malloc(sizeof(char) * len);
 	for (i = 0; arr != NULL && i < len; i++)
 	{
