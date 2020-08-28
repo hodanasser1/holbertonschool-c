@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 
 	count1 = _strlen_recursion(s1);
 	count2 = _strlen_recursion(s2);
-	result = (char *)malloc(sizeof(char) * (count1 + count2));
+	result = (char *)malloc(sizeof(char) * (count1 + count2) + 1);
 
 	for (i = 0; result != NULL && i < count1; i++)
 	{
@@ -80,7 +80,7 @@ char *argstostr(int ac, char **av)
 	{
 		len += _strlen_recursion(av[i]);
 	}
-	output = (char *)malloc(sizeof(char) * (len + ac) + 1);
+	output = (char *)malloc(sizeof(char) * (len + ac) + ac - 1);
 	for (i = 0; i < ac && av[i] != NULL && output != NULL; i++)
 	{
 		output = str_concat(output, av[i]);
