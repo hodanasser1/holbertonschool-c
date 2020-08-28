@@ -35,7 +35,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	len = _strlen_recursion(str);
-	arr = (char *)malloc(sizeof(char) * len);
+	arr = (char *)malloc(sizeof(char) * (len - 1));
 	for (i = 0; arr != NULL && i < len; i++)
 	{
 		arr[i] = str[i];
