@@ -1,5 +1,22 @@
+#include "holberton.h"
 #include <stdlib.h>
 #include <string.h>
+
+/**
+ * _strlen_recursion - print string recursive
+ * @s: String to print
+ *
+ * Return: Always 0.
+ */
+uint64_t _strlen_recursion(char *s)
+{
+	if (*s)
+	{
+		return (1 + _strlen_recursion(s + 1));
+	}
+	return (0);
+}
+
 
 /**
  * str_concat - check the code for Holberton School students.
@@ -10,9 +27,31 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *result = malloc(strlen(s1) + strlen(s2) + 1);
+	uint64_t i = 0;
+	uint64_t count1 = 0;
+	uint64_t count2 = 0;
+	char *result;
 
-	strcpy(result, s1);
-	strcat(result, s2);
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	count1 = _strlen_recursion(s1);
+	count2 = _strlen_recursion(s2);
+	result = (char *)malloc(sizeof(char) * (count1 + count2) + 1);
+
+	for (i = 0; result != NULL && i < count1; i++)
+	{
+		result[i] = s1[i];
+	}
+	for (i = count1; result != NULL && i < (count1 + count2); i++)
+	{
+		result[i] = s2[i - count1];
+	}
 	return (result);
 }
