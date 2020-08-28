@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 
 	count1 = _strlen_recursion(s1);
 	count2 = _strlen_recursion(s2);
-	result = (char *)malloc(sizeof(char) * (count1 + count2) + 1);
+	result = (char *)malloc(sizeof(char) * (count1 + count2));
 
 	for (i = 0; result != NULL && i < count1; i++)
 	{
