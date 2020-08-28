@@ -80,7 +80,7 @@ char *argstostr(int ac, char **av)
 	{
 		len += _strlen_recursion(av[i]);
 	}
-	output = (char *)malloc(sizeof(char) * (len + ac));
+	output = (char *)malloc(sizeof(char) * (len + ac) + 1);
 	for (i = 0; i < ac && av[i] != NULL && output != NULL; i++)
 	{
 		output = str_concat(output, av[i]);
