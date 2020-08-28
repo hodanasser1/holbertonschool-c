@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+int _strlen_recursion(char *s);
 char *create_array(unsigned int size, char c);
 uint64_t recLen(char *str);
 char *_strdup(char *str);
