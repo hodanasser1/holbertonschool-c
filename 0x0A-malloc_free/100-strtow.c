@@ -15,6 +15,45 @@ int _strlen_recursion(char *s)
 	return (0);
 }
 
+/**
+ * _strlen_recursion2 - print string recursive
+ * @s: String to print
+ *
+ * Return: Always 0.
+ */
+int _strlen_recursion2(char *s)
+{
+	if (*s && s != ' ')
+	{
+		return (1 + _strlen_recursion(s + 1));
+	}
+	return (0);
+}
+
+/**
+ * _strdup2 - print string recursive
+ * @str: String to print
+ *
+ * Return: Always 0.
+ */
+char *_strdup2(char *str)
+{
+	char *arr;
+	int i = 0;
+	int len = 0;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	len = _strlen_recursion2(str);
+	arr = (char *)malloc(sizeof(char) * len + 1);
+	for (i = 0; arr != NULL && i < len; i++)
+	{
+		arr[i] = str[i];
+	}
+	return (arr);
+}
 
 /**
  * strtow - prints a grid of integers
@@ -58,13 +97,15 @@ char **strtow(char *str)
 	for (i = 0; i < len && str != NULL; i++)
 	{
 		if (str[i] != ' ')
-			c_arr[index]++;
+			c_arr[index] = _strlen_recursion2(*str[i]);
 
 		if (i != 0 && str[i] == ' ' && str[i-1] != ' ')
 		{
 			index++;
 		}
 	}
+	for (i = 0; i < count && c_arr != NULL; i++)
+		printf("%d: %d", index, c_arr[index]);
 	return (result);
 }
 
