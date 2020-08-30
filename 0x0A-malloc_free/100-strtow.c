@@ -70,7 +70,7 @@ char **strtow(char *str)
 	int *c_arr = 0;
 	char **result = NULL;
 
-	if (str == NULL || str == (char *)"")
+	if (str == NULL || _strlen_recursion(str) == 0)
 	{
 		return (NULL);
 	}
