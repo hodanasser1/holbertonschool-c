@@ -8,7 +8,7 @@
  *
  * Return: Always 0.
  */
-uint64_t _strlen_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s)
 	{
@@ -27,9 +27,9 @@ uint64_t _strlen_recursion(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	uint64_t i = 0;
-	uint64_t count1 = 0;
-	uint64_t count2 = 0;
+	int i = 0;
+	int count1 = 0;
+	int count2 = 0;
 	char *result;
 
 	if (s1 == NULL)
