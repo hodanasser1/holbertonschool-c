@@ -79,11 +79,13 @@ char **strtow(char *str)
 		if (i != 0 && str[i] == ' ' && str[i - 1] != ' ')
 			count++;
 
-	if (count != 0)
-	{
-		result = (char **)malloc(sizeof(char *) * (count + 1));
-		c_arr = (int *)malloc(sizeof(int) * count);
-	}
+	/*
+	* if (count != 0)
+	* {
+	*/
+	result = (char **)malloc(sizeof(char *) * (count + 1));
+	c_arr = (int *)malloc(sizeof(int) * count);
+	/* }*/
 
 	for (i = 0; i < count && c_arr != NULL; i++)
 		c_arr[i] = 0;
