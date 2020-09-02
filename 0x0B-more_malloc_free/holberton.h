@@ -14,5 +14,6 @@ unsigned int string_length(char *str)
 void print_string(char *st)
 void *_calloc(unsigned int number, unsigned int size)
 int main(int argc, char **argv)
+int _putchar(char c);
 
 #endif
